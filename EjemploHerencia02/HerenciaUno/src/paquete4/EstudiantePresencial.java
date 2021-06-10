@@ -3,10 +3,15 @@ package paquete4;
 
 public class EstudiantePresencial extends Estudiante{
     
-    int numeroCreditos;
-    double costoCredito;
-    double matriculaPresencial;
-    
+    protected int numeroCreditos;
+    protected double costoCredito;
+    protected double matriculaPresencial;
+        //Se añadio el constructor para que reciba los valore y luego
+    //Se le envia los 4 parametros al constructor de la clase estudiante
+    //Con la palabra reservada "super"
+    public EstudiantePresencial(String n, String a, String iden, int ed){
+        super( n,  a,  iden,  ed);
+    }
     //  Métodos establecer y calcular para los datos o atributos de la clase
     // 2.  Método establecerNumeroCreditos(numero: Real)
     public void establecerNumeroCreditos(int numero){
